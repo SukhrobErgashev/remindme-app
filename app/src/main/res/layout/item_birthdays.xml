@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:cardBackgroundColor="@color/light"
+        app:cardCornerRadius="5dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/name_birthday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/comfortaa"
+                android:text="Personal"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/person_birthday"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/date_birthday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/comfortaa"
+                android:text="March 18, 2022"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="@+id/name_birthday"
+                app:layout_constraintTop_toBottomOf="@+id/name_birthday" />
+
+            <ImageView
+                android:id="@+id/person_birthday"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:padding="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_female" />
+
+            <ImageView
+                android:id="@+id/notification_birthday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/date_birthday"
+                app:layout_constraintTop_toBottomOf="@+id/date_birthday"
+                app:srcCompat="@drawable/ic_notification" />
+
+            <TextView
+                android:id="@+id/birthday_day_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="25 Days left"
+                android:layout_marginStart="8dp"
+                android:textColor="@android:color/holo_red_light"
+                android:fontFamily="@font/comfortaa"
+                app:layout_constraintBottom_toBottomOf="@+id/notification_birthday"
+                app:layout_constraintStart_toEndOf="@+id/notification_birthday"
+                app:layout_constraintTop_toTopOf="@+id/notification_birthday" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/notesFragment">
+
+    <fragment
+        android:id="@+id/notesFragment"
+        android:name="uz.gita.remindme.fragments.notes.NotesFragment"
+        android:label="Notes"
+        tools:layout="@layout/fragment_notes" >
+        <action
+            android:id="@+id/action_notesFragment_to_addNoteFragment"
+            app:destination="@id/addNoteFragment" />
+        <action
+            android:id="@+id/action_notesFragment_to_editNoteFragment"
+            app:destination="@id/editNoteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tasksFragment"
+        android:name="uz.gita.remindme.fragments.tasks.TasksFragment"
+        android:label="Tasks"
+        tools:layout="@layout/fragment_tasks" >
+        <action
+            android:id="@+id/action_tasksFragment_to_addTaskFragment"
+            app:destination="@id/addTaskFragment" />
+        <action
+            android:id="@+id/action_tasksFragment_to_editTaskFragment"
+            app:destination="@id/editTaskFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/birthdaysFragment"
+        android:name="uz.gita.remindme.fragments.birthdays.BirthdaysFragment"
+        android:label="Birthdays"
+        tools:layout="@layout/fragment_birthdays" >
+        <action
+            android:id="@+id/action_birthdaysFragment_to_addBirthdayFragment"
+            app:destination="@id/addBirthdayFragment" />
+        <action
+            android:id="@+id/action_birthdaysFragment_to_editBirthdayFragment"
+            app:destination="@id/editBirthdayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="uz.gita.remindme.fragments.settings.SettingsFragment"
+        android:label="About"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/addNoteFragment"
+        android:name="uz.gita.remindme.fragments.notes.AddNoteFragment"
+        android:label="Add Note"
+        tools:layout="@layout/fragment_add_note" >
+        <action
+            android:id="@+id/action_addNoteFragment_to_notesFragment"
+            app:destination="@id/notesFragment"
+            app:popUpTo="@id/notesFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_edit_note"
+        android:id="@+id/editNoteFragment"
+        android:name="uz.gita.remindme.fragments.notes.EditNoteFragment"
+        android:label="Edit Note" >
+        <argument
+            android:name="note"
+            app:argType="uz.gita.remindme.data.models.Note" />
+        <action
+            android:id="@+id/action_editNoteFragment_to_notesFragment"
+            app:destination="@id/notesFragment"
+            app:popUpTo="@id/notesFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/addTaskFragment"
+        android:name="uz.gita.remindme.fragments.tasks.AddTaskFragment"
+        android:label="Add Task"
+        tools:layout="@layout/fragment_add_task">
+        <action
+            android:id="@+id/action_addTaskFragment_to_tasksFragment"
+            app:destination="@id/tasksFragment"
+            app:popUpTo="@id/tasksFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/addBirthdayFragment"
+        android:name="uz.gita.remindme.fragments.birthdays.AddBirthdayFragment"
+        android:label="Add Birthday"
+        tools:layout="@layout/fragment_add_birthday">
+        <action
+            android:id="@+id/action_addBirthdayFragment_to_birthdaysFragment"
+            app:destination="@id/birthdaysFragment"
+            app:popUpTo="@id/birthdaysFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/editBirthdayFragment"
+        android:name="uz.gita.remindme.fragments.birthdays.EditBirthdayFragment"
+        android:label="Edit Birthday"
+        tools:layout="@layout/fragment_edit_birthday">
+        <action
+            android:id="@+id/action_editBirthdayFragment_to_birthdaysFragment"
+            app:destination="@id/birthdaysFragment"
+            app:popUpTo="@id/birthdaysFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="birthday"
+            app:argType="uz.gita.remindme.data.models.Birthday" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_edit_task"
+        android:id="@+id/editTaskFragment"
+        android:name="uz.gita.remindme.fragments.tasks.EditTaskFragment"
+        android:label="EditTaskFragment" >
+        <action
+            android:id="@+id/action_editTaskFragment_to_tasksFragment"
+            app:destination="@id/tasksFragment"
+            app:popUpTo="@id/tasksFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="task"
+            app:argType="uz.gita.remindme.data.models.Task" />
+    </fragment>
+</navigation>

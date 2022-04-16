@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dark"
+        tools:context=".fragments.tasks.AddTasksFragment">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/container_add_task_title"
+            style="@style/JustDoIt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <AutoCompleteTextView
+                android:id="@+id/add_task_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="none"
+                android:text="Personal"
+                android:textColor="@color/gray" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/comfortaa"
+            android:text="@string/what_is_to_be_done"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/container_add_task_title"
+            app:layout_constraintTop_toBottomOf="@+id/container_add_task_title" />
+
+        <EditText
+            android:id="@+id/add_task_body"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:fontFamily="@font/comfortaa"
+            android:gravity="start|top"
+            android:hint="@string/enter_task_here"
+            android:inputType="textMultiLine"
+            android:textColor="@color/white"
+            android:textColorHint="@color/gray"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/comfortaa"
+            android:text="@string/due_date"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/add_task_body"
+            app:layout_constraintTop_toBottomOf="@+id/add_task_body" />
+
+        <TextView
+            android:id="@+id/add_task_date"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/shape_date"
+            android:ems="10"
+            android:fontFamily="@font/comfortaa"
+            android:hint="@string/select_date"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/gray"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@+id/textView3"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <TextView
+            android:id="@+id/add_task_time"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/shape_date"
+            android:ems="10"
+            android:fontFamily="@font/comfortaa"
+            android:hint="@string/select_time"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/gray"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@+id/add_task_date"
+            app:layout_constraintTop_toBottomOf="@+id/add_task_date" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/add_task_date"
+            app:layout_constraintStart_toEndOf="@+id/add_task_date"
+            app:layout_constraintTop_toTopOf="@+id/add_task_date"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/ic_date" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/add_task_time"
+            app:layout_constraintStart_toEndOf="@+id/add_task_time"
+            app:layout_constraintTop_toTopOf="@+id/add_task_time"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/ic_time" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/c_add_task_notify_type"
+            style="@style/JustDoIt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="40dp"
+            android:hint="@string/notify_type"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_task_time">
+
+            <AutoCompleteTextView
+                android:id="@+id/add_task_notify_type"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="none"
+                android:text="Notification"
+                android:textColor="@color/gray" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

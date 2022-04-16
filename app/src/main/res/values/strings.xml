@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">RemindMe</string>
+    <string name="select_date">Select Date</string>
+    <string name="select_time">Select Time</string>
+    <string name="notify_type">Notify Type</string>
+    <string name="due_date">Due Date</string>
+    <string name="enter_task_here">Enter Task here.</string>
+    <string name="what_is_to_be_done">What is to be done?</string>
+    <string-array name="titles">
+        <item>Personal</item>
+        <item>Work</item>
+        <item>Education</item>
+        <item>Motivational</item>
+    </string-array>
+    <string-array name="notify_types">
+        <item>Notification</item>
+        <item>Alarm</item>
+    </string-array>
+
+    <string-array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+</resources>
